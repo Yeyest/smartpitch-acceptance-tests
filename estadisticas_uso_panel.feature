@@ -16,3 +16,10 @@ Feature: Estadísticas de uso del sistema
     Given existen registros históricos
     When el administrador selecciona un periodo
     Then el sistema muestra métricas filtradas
+
+  # US18
+
+  Scenario: No existen datos suficientes (Exception)
+    Given no existen registros en el sistema
+    When el administrador abre el panel
+    Then el sistema informa que no hay datos disponibles
