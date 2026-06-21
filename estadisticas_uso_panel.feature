@@ -3,3 +3,9 @@ Feature: Estadísticas de uso del sistema
   Quiero visualizar métricas de uso
   Para monitorear el sistema
 
+  # US18
+
+  Scenario: Visualización de estadísticas generales (Happy Path)
+    Given existen datos registrados en el sistema
+    When el administrador accede al panel
+    Then el sistema muestra métricas de uso
