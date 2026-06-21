@@ -16,3 +16,10 @@ Feature: Interacción por voz en simulación
     Given una respuesta está siendo grabada
     When el estudiante decide volver a grabar
     Then el sistema reemplaza la grabación anterior
+    
+  # NFR - Performance
+
+  Scenario: Retraso en captura de audio (Exception)
+    Given el micrófono está activo
+    When el sistema tarda demasiado en procesar la voz
+    Then el sistema muestra una alerta de latencia
