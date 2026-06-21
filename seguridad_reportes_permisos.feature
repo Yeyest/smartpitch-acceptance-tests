@@ -9,3 +9,10 @@ Feature: Seguridad en acceso a reportes
     Given el docente ha iniciado sesión
     When accede al reporte de un estudiante
     Then el sistema muestra el desempeño del estudiante
+    
+  # US12
+
+  Scenario: Visualización de métricas del reporte (Alternate)
+    Given un reporte disponible
+    When el docente lo abre
+    Then el sistema muestra métricas detalladas
