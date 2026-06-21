@@ -17,3 +17,10 @@ Feature: Simulación de sustentación con IA
     Given el estudiante tiene varias presentaciones registradas
     When selecciona una presentación específica
     Then el sistema inicia la simulación con la presentación seleccionada
+
+  # US02
+
+  Scenario: No existe presentación cargada (Exception)
+    Given el estudiante ha iniciado sesión
+    When intenta iniciar la simulación sin una presentación
+    Then el sistema informa que debe cargar una presentación primero
