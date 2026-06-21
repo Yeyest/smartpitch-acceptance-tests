@@ -16,3 +16,10 @@ Feature: Seguridad en acceso a reportes
     Given un reporte disponible
     When el docente lo abre
     Then el sistema muestra métricas detalladas
+
+  # US12
+
+  Scenario: Acceso no autorizado (Exception)
+    Given un usuario sin permisos
+    When intenta acceder a un reporte
+    Then el sistema deniega el acceso
