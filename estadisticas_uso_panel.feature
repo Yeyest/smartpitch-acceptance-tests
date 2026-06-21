@@ -9,3 +9,10 @@ Feature: Estadísticas de uso del sistema
     Given existen datos registrados en el sistema
     When el administrador accede al panel
     Then el sistema muestra métricas de uso
+    
+  # US18
+
+  Scenario: Consulta por periodo de tiempo (Alternate)
+    Given existen registros históricos
+    When el administrador selecciona un periodo
+    Then el sistema muestra métricas filtradas
